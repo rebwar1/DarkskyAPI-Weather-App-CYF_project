@@ -130,7 +130,7 @@ module.exports = (env, { mode }) => {
         directory: path.join(__dirname, "build"),
       },
       compress: true,
-      port: 9000,
+      port: 8000,
       open: true,
     };
   }
