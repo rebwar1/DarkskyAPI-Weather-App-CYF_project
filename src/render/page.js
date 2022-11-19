@@ -6,7 +6,8 @@ const temperatureDescription = document.querySelector(
   ".temperature-description"
 );
 const placeName = document.querySelector(".place-name");
-const icon = document.querySelector(".icon");
+const iconImg = document.querySelector(".icon");
+
 function con(
   temp_c,
   text,
@@ -19,13 +20,14 @@ function con(
   tz_id
 ) {
   let tagle = "C";
+
   temperatureDegree.textContent = temp_c;
   temperatureSpan.textContent = "C";
   temperatureDescription.textContent = text;
   locationTimezone.textContent = `${tz_id}/${name}`;
   placeName.textContent = `Weather in ${country}, ${name}, ${region}`;
-  icon = "cdn.weatherapi.com/weather/64x64/night/113.png";
 
+  iconImg.setAttribute("src", icon);
   //   let celsius = (temp_c - 32) * (5 / 9);
 
   temperatureSection.addEventListener("click", () => {
